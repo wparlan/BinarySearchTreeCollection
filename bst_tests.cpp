@@ -1,6 +1,6 @@
 /*
 Name: William Parlan
-Assignment: Homework 3
+Assignment: Homework 9
 Description: File containing test cases for the BSTCollection class.
 All 6 member functions are tested along with some fringe cases.
 */
