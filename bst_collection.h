@@ -86,7 +86,6 @@ collection_size(0), root(nullptr){}
 
 template<typename K, typename V>
 void BSTCollection<K,V>::make_empty(Node* subtree_root){
-	// ... TODO ...
 	// this is a recursive helper function
 	if(!subtree_root)
 		return;
@@ -113,33 +112,23 @@ template<typename K, typename V>
 BSTCollection<K,V>& BSTCollection<K,V>::operator =(const BSTCollection<K,V>& rhs){
 	if(this == &rhs)
 		return* this;
-	// delete current
-	//std::cout<<"is make empty the problem\n";
 	make_empty(root);
-	//std::cout<<"no make empty isn't\n";
 	collection_size = 0;
 	root = nullptr;
 	// build tree
 	std::vector<K> ks;
 	preorder(rhs.root, ks);
-	// ... TODO ...
 	V v;
-	//std::cout<<"for loop start\n";
-	//std::cout<<ks.size()<<std::endl;
 	for(int i=0;i<ks.size();i++){
-		//std::cout<<"begin find\n";
 		rhs.find(ks[i],v);
-		//std::cout<<"begin insert\n";
 		insert(ks[i],v);
 	}
-	//std::cout<<"for loop done\n";
 	return* this;
 }
 
 
 template<typename K, typename V>
 void BSTCollection<K,V>::insert(const K& key, const V& val){
-	// ... TODO ...
 	// NOTE:You cannot use recursion or any helpers for insert
 	//create new node with given inputs
 	Node* ptr = new Node;
@@ -177,15 +166,12 @@ void BSTCollection<K,V>::insert(const K& key, const V& val){
 
 template<typename K, typename V>
 void BSTCollection<K,V>::remove(const K& key){
-	// ... Leave empty for now ...
-	// ... SAVE FOR HW 9 ...
 	root = remove(key,root);
 }
 
 
 template<typename K, typename V>
 bool BSTCollection<K,V>::find(const K& key, V& val) const{
-	// ... TODO ...
 	// NOTE:You cannot use recursion or any helpers for find
 	Node* iter = root;
 	while(iter){
@@ -205,7 +191,6 @@ bool BSTCollection<K,V>::find(const K& key, V& val) const{
 template<typename K, typename V> void
 BSTCollection<K,V>::
 range_search(const Node* subtree, const K& k1, const K& k2, std::vector<K>& ks) const{
-	// ... TODO ...
 	// this is a recursive helper function
 	if(k1 > k2 || !root)
 		return;
@@ -242,7 +227,6 @@ BSTCollection<K,V>::find(const K& k1, const K& k2, std::vector<K>& ks) const{
 
 template<typename K, typename V>
 void BSTCollection<K,V>::inorder(const Node* subtree, std::vector<K>& ks) const{
-	// ... TODO ...
 	// this is a recursive helper function
 	if(!subtree)
 		return;
@@ -255,7 +239,6 @@ void BSTCollection<K,V>::inorder(const Node* subtree, std::vector<K>& ks) const{
 
 template<typename K, typename V>
 void BSTCollection<K,V>::preorder(const Node* subtree, std::vector<K>& ks) const{
-	// ... TODO ...
 	// this is a recursive helper function
 	if(!subtree)
 		return;
