@@ -1,7 +1,7 @@
 /*
 Name: William Parlan
-Assignment: Homework 3
-Description: Main function that uses test_driver and GTEST to analyze runtimes for VectorCollection
+Assignment: Homework 8
+Description: Main function that uses test_driver and GTEST to analyze runtimes for BSTCollection
 */
 #include <iostream>
 #include "bst_collection.h"
